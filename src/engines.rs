@@ -1,3 +1,4 @@
+pub mod amazon;
 pub mod dev;
 pub mod docker;
 pub mod github;
