@@ -2,6 +2,7 @@ pub mod amazon;
 pub mod dev;
 pub mod docker;
 pub mod github;
+pub mod gmail;
 pub mod google;
 pub mod reddit;
 pub mod twitter;

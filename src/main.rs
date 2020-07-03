@@ -2,7 +2,7 @@
 
 use rocket::{get, response::Redirect, routes};
 mod engines;
-use engines::{amazon, dev, docker, github, google, reddit, twitter, youtube};
+use engines::{amazon, dev, docker, github, gmail, google, reddit, twitter, youtube};
 
 #[get("/")]
 fn index() -> &'static str {
@@ -17,6 +17,7 @@ fn search(q: String) -> Redirect {
         "dev" => dev::construct_url(&q),
         "dh" => docker::construct_url(&q),
         "gh" => github::construct_url(&q),
+        "gm" => gmail::construct_url(&q),
         "rd" => reddit::construct_url(&q),
         "tw" => twitter::construct_url(&q),
         "yt" => youtube::construct_url(&q),
